@@ -27,9 +27,6 @@ jobs:
       - name: Build Spring Boot application
         run: mvn clean package
 
-      - name: Print OIDC token claims
-        uses: github/actions-oidc-debugger@v1
-        
       - name: Debug GitHub context
         run: |
           echo "Repository: ${{ github.repository }}"
